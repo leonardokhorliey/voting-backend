@@ -12,9 +12,6 @@ export class Election extends Model<Election>{
 
     @Column
     source: string;
-
-    @Column
-    
     
     @ForeignKey(()=> User)
     @Column

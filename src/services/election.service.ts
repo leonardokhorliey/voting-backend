@@ -12,7 +12,11 @@ export class ElectionService extends Repository<Election>{
         return await this.create(data);
     }
 
-    public fetchElectionPhase = async (electionId: number) => {
+    public getAllElections = async () => {
+        return await this.findAll();
+    }
+
+    private fetchElectionPhase = async (electionId: number) => {
         let election = await this.findOne({
             where: {
                 id: electionId

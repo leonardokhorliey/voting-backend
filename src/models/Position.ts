@@ -15,7 +15,7 @@ export class Position extends Model<Position>{
     
     @ForeignKey(()=> Election)
     @Column
-    electionId: number;
+    election_id: number;
 
     @Default(1)
     @Column
