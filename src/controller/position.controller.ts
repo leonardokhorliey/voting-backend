@@ -30,9 +30,6 @@ class PositionController extends Controller {
     
     }
 
-
-
-
 }
 
 export default PositionController;

@@ -23,14 +23,15 @@ export class UserService extends Repository<User> {
     if (check) {
       return null;
     } else {
-      let newPost: any = await this.create(userData);
+      let newUser: any = await this.create(userData);
       await this.otpService.saveOTP({
-        email: newPost.email,
-        phone: newPost.phone,
+        email: newUser.email,
+        phone: newUser.phone,
         code: otpGenerator(),
         expiration_time: addIntervaltoDate(new Date(), 10, "minute"),
+        purpose: "login"
       });
-      return newPost;
+      return newUser;
     }
   };
 

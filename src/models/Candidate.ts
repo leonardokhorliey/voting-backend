@@ -7,14 +7,14 @@ export class Candidate extends Model<Candidate>{
 
     @ForeignKey(()=> User)
     @Column
-    userId: number;
+    user_id: number;
 
     @Column
     watchword: string;
 
     @ForeignKey(()=> Election)
     @Column
-    positionId: number;
+    position_id: number;
 
     @Default(0)
     @Column

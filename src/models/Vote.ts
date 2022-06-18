@@ -1,6 +1,5 @@
 import {Model, Column, Table, ForeignKey, CreatedAt, UpdatedAt, Default, HasMany, HasOne} from "sequelize-typescript";
 import { User } from "./User";
-import { Election } from "./Election";
 import { Candidate } from "./Candidate";
 
 
@@ -8,11 +7,11 @@ import { Candidate } from "./Candidate";
 export class Vote extends Model<Vote>{
     @ForeignKey(() => User)
     @Column
-    voterId: number;
+    voter_id: number;
 
     @ForeignKey(()=> Candidate)
     @Column
-    electionId: Candidate;
+    candidate_id: number;
 
     @CreatedAt
     @Column

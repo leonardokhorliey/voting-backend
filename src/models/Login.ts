@@ -2,7 +2,7 @@ import {Model, Column, Table, ForeignKey, CreatedAt, UpdatedAt, Default, HasMany
 import { User } from "./User";
 
 @Table
-export class Election extends Model<Election>{
+export class Login extends Model<Login>{
 
     @Column
     deviceType: string;

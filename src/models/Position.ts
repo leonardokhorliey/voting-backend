@@ -11,7 +11,7 @@ export class Position extends Model<Position>{
     description: string;
 
     @Column
-    maxNumberOfCandidates: number;
+    candidate_threshold: number;
     
     @ForeignKey(()=> Election)
     @Column

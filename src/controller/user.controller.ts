@@ -9,7 +9,7 @@ import { encrypt, decrypt } from '../utils/encryption'
 import { config } from '../config/config'
 
 @injectable()
-class AuthController extends Controller {
+class UserController extends Controller {
   // private userRepository
   constructor(
     private userService: UserService
@@ -79,4 +79,4 @@ class AuthController extends Controller {
   };
 }
 
-export default AuthController
+export default UserController

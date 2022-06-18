@@ -1,0 +1,5 @@
+export {default as VoteRoute} from "./vote"
+export {default as UserRoute} from "./user"
+export {default as ElectionRoute} from "./election"
+export {default as PositionRoute} from "./position"
+export {default as CandidateRoute} from "./candidate"
